@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NUMBER 2</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+
+        #E1 {
+            position: absolute;
+            left: 750px;
+            top: 100px;
+            width: 400px;
+            height: 400px;
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        h2 {
+          bottom:380px;
+          left:860px;
+          position:absolute;
+          width: 350x;
+          height:350;
+        }
+         .E2 {
+          bottom:350px;
+          left:860px;
+          position:absolute;
+          width: 350x;
+          height:350;
+         }
+        
+    </style>
+</head>
+<body>
+
+    <img id="E1" src="https://gifdb.com/images/high/thats-what-im-talking-about-happy-shaq-o-neal-4vryhen9gtf4fj38.gif" alt="Happy Shaq">
+
+    <!-- 🎵 Fun music clip -->
+    <audio id="song" src="https://www.fesliyanstudios.com/play-mp3/6294" preload="auto"></audio>
+
+    <!-- 🎉 Confetti library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        let surpriseShown = false;
+
+        document.body.addEventListener('click', function () {
+            if (surpriseShown) return;
+            surpriseShown = true;
+
+            // Play song
+            const music = document.getElementById('song');
+            music.volume = 0.8; // not too loud
+            music.play();
+
+            // Confetti boom
+            confetti({
+                particleCount: 250,
+                spread: 120,
+                origin: { y: 0.6 }
+            });
+        });
+    </script>
+    <h2>Click the image</h2>
+    <h3 class="E2">THANKYOU KUYA</h3>
+   
+</body>
+</html>
